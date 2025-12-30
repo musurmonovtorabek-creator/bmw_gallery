@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">BMW</div>
+
+    <div class="menu" id="menu">
+        <a href="/">Home</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/about">About</a>
+    </div>
+
+    <div class="burger" onclick="toggleMenu()">☰</div>
+</nav>
+
+<h1>BMW Gallery</h1>
+
+<div class="gallery">
+    <img src="{{ url_for('static', filename='images/bmw1.jpg') }}" onclick="openModal(0)">
+    <img src="{{ url_for('static', filename='images/bmw2.jpg') }}" onclick="openModal(1)">
+    <img src="{{ url_for('static', filename='images/bmw3.jpg') }}" onclick="openModal(2)">
+    <img src="{{ url_for('static', filename='images/bmw4.jpg') }}" onclick="openModal(3)">
+</div>
+
+<div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">×</span>
+    <img id="modal-img">
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+</body>
+</html>

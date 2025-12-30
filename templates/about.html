@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">BMW</div>
+
+    <div class="menu" id="menu">
+        <a href="/">Home</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/about">About</a>
+    </div>
+
+    <div class="burger" onclick="toggleMenu()">☰</div>
+</nav>
+
+<h1>About This Site</h1>
+<p>
+Bu sayt Flask yordamida yaratilgan.  
+BMW mashinalari galereyasi va slayd funksiyasi mavjud.
+</p>
+
+</body>
+</html>
+

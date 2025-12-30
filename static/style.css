@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background: #000;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #00aaff;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Sarlavha */
+h1 {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 42px;
+}
+
+/* GALEREYA */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    text-align: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 70px;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.prev { left: 30px; }
+.next { right: 30px; }
+
+/* ABOUT */
+p {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* MOBIL */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+/* RESPONSIVE NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background: #000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00aaff;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.burger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* TELEFON */
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .menu a {
+        padding: 12px;
+        text-align: center;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+}
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url("/static/images/bmw1.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+.btn {
+    padding: 14px 35px;
+    background: #00aaff;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0088cc;
+}
+
+/* INFO SECTION */
+.info {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.info h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+}

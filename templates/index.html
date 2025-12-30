@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>BMW Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">BMW</div>
+
+    <div class="menu" id="menu">
+        <a href="/">Home</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/about">About</a>
+    </div>
+
+    <div class="burger" onclick="toggleMenu()">☰</div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>BMW Gallery</h1>
+        <p>Luxury • Power • Performance</p>
+        <a href="/gallery" class="btn">View Gallery</a>
+    </div>
+</section>
+
+<!-- INFO -->
+<section class="info">
+    <h2>Nega BMW?</h2>
+    <p>
+        BMW — bu tezlik, qulaylik va mukammal dizayn uyg‘unligi.
+        Ushbu sayt orqali BMW mashinalarining eng chiroyli suratlarini ko‘rishingiz mumkin.
+    </p>
+</section>
+
+<script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+</body>
+</html>
